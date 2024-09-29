@@ -26,7 +26,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} flex flex-col items-center justify-center min-h-screen bg-cover bg-center`}
+        style={{ backgroundImage: "url('/img/362262-svetik.jpg')" }}
       >
         {children}
       </body>
