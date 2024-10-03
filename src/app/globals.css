@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 .loader {
-	border-top-color: #3498db; /* колір верхньої частини */
-	animation: spin 1s ease-in-out infinite; /* анімація обертання */
+	border-top-color: #3498db;
+	animation: spin 1s ease-in-out infinite; 
  }
  
  @keyframes spin {

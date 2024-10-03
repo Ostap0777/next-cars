@@ -1,9 +1,8 @@
 "use client"
-import { Suspense, useEffect, useState } from 'react';
+import {  useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
-import Loading from '../../../Components/UI/Loader/Loader'; 
 import { Vehicle } from '@/app/models/models';
-import Loader from '../../../Components/UI/Loader/Loader';
+import Loader from '@/app/Components/UI/Loader/Loader';
 
 export default function ResultPage() {
   const { makeId, year } = useParams(); 
@@ -44,7 +43,10 @@ export default function ResultPage() {
 
 
   return (
-	<Suspense fallback={<Loader/>}>
+	<div> 
+		{loading ? (
+			<Loader/>
+		) :
     <div className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-lg border border-gray-200">
       <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">
         Результати для марки {makeName} і року {year}
@@ -68,6 +70,7 @@ export default function ResultPage() {
         )}
       </ul>
     </div>
-	 </Suspense>
+}
+	 </div>
   );
 }

@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Suspense from "../Components/UI/Loader/Loader"; 
 import { VehicleMake } from "../models/models";
+
+
 export default function Home() {
   const [makes, setMakes] = useState<VehicleMake[]>([]);
   const [selectedMake, setSelectedMake] = useState<string>("");
